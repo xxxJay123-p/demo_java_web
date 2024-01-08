@@ -1,0 +1,224 @@
+/* =========Google Font========= */
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+/* ========= Variable ========= */
+:root {
+  --main-color: #967259;
+  --seconed-color: #dbc1ac;
+  --third-color: #030303;
+  --dark-less-color: #634832;
+  --dark-color: #38220f;
+  --back-color: #000000;
+  --white-color: #ffffff;
+  --text-color: #dbc1ac;
+  --bg-color: #e6e8f8;
+  --java-blue-color: #77bff2;
+
+  /* Font (8-bits ) */
+  --font-family-vt: "VT323", monospace;
+  --font-family-2p: "Press Start 2P", system-ui;
+}
+
+/* ============ Base ============*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-padding-top: 3rem;
+  font-family: var(----font-family-vt, --font-family-2p);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+section {
+  padding: 3rem 8rem 2rem;
+}
+
+.containar {
+  max-width: 1060px;
+  margin: auto;
+  width: 100%;
+}
+
+.main {
+  overflow-x: hidden;
+}
+/* ============ Header ============*/
+header {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 30px;
+  border-radius: 3rem;
+  background-color: #000000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav .logo-img {
+  width: 20%;
+  filter: brightness(0) invert(1);
+}
+
+.nav .logo-text {
+  font-size: 2.5rem;
+  font-family: var(--font-family-vt);
+  color: var(--white-color);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  column-gap: 1.2rem;
+}
+
+.nav-link {
+  font-size: 1.5rem;
+  color: var(--white-color);
+  font-family: var(--font-family-vt);
+  transition: 0.4s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.nav-link:hover {
+  color: var(--seconed-color);
+  transition: 0.4s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.nav-icon .bx {
+  color: var(--white-color);
+  font-size: 20px;
+  transition: 0.4s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.nav-icon .bx:hover {
+  color: var(--seconed-color);
+  transition: 0.4s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+/* ============ Home ============*/
+.home {
+  width: 100%;
+  position: relative;
+}
+
+.home__img {
+  position: fixed;
+  overflow-x: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+  height: 90vh;
+  object-position: 83%;
+  z-index: 1;
+  opacity: 0.7;
+  filter: saturate(0.1);
+}
+
+.home__container {
+  margin-top: 9rem;
+  position: relative;
+  min-width: 650px;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 1.5rem;
+  z-index: 2;
+}
+
+.home-text {
+  width: 60%;
+}
+
+.home-text h1 {
+  font-size: 4rem;
+  font-family: var(--font-family-2p);
+  color: var(--main-color);
+}
+
+.home-text .java-text {
+  color: var(--java-blue-color);
+}
+
+.home-text p {
+  max-width: 300px;
+  font-size: 2rem;
+  font-family: var(--font-family-vt);
+  margin: 1rem 0 1.5rem;
+}
+
+.home-text .btn {
+  max-width: 160px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  column-gap: 0.5rem;
+  border-radius: 2rem;
+  background-color: var(--dark-less-color);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn span {
+  margin-left: 1.2rem;
+  font-size: 1.5rem;
+  font-family: var(--font-family-vt);
+  color: var(--white-color);
+  text-transform: uppercase;
+}
+
+.btn .bx {
+  font-size: 20px;
+  background-color: var(--seconed-color);
+  color: var(--bg-color);
+  border-radius: 50%;
+  padding: 5px;
+  transform: rotate(60deg);
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn:hover .bx {
+  transform: rotate(180deg);
+}
+
+@media screen and (max-width: 1163px) {
+  .home__container {
+    margin-top: 6rem;
+  }
+
+  .home-text h1 {
+    font-size: 3rem;
+  }
+}
+
+/* ============ Home ============*/
