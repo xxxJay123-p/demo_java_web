@@ -1,0 +1,307 @@
+/* =========Google Font========= */
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+/* ========= Variable ========= */
+:root {
+  --main-color: #967259;
+  --seconed-color: #dbc1ac;
+  --third-color: #030303;
+  --dark-less-color: #634832;
+  --dark-color: #38220f;
+  --back-color: #000000;
+  --white-color: #ffffff;
+  --text-color: #dbc1ac;
+  --bg-color: #e6e8f8;
+  --java-blue-color: #77bff2;
+
+  /* Font (8-bits ) */
+  --font-family-vt: "VT323", monospace;
+  --font-family-2p: "Press Start 2P", system-ui;
+}
+
+/* hide the scrollbar */
+* {
+  scrollbar-width: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  /* font-family: "Zen Dots", sans-serif; */
+
+  font-family: var(--font-family-vt);
+  font-size: 1rem;
+}
+
+/*Header Style*/
+header {
+  background: url("https://tenor.com/zh-TW/view/gif-gif-21796413.gif") no-repeat
+    center center;
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  max-height: 1080px;
+  background-size: cover;
+}
+
+a.navbar-brand {
+  color: var(--white-color) !important;
+}
+
+a.navbar-brand:hover,
+a.navbar-brand:active {
+  color: var(--white-color) !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: var(--white-color);
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+}
+
+.navbar {
+  background: linear-gradient(
+    to bottom,
+    var(--back-color) 0%,
+    rgba(255, 255, 255, 0) 100%
+  ) !important;
+  border-radius: 3rem;
+}
+
+/* -------------------------login-cert------------------------- */
+.login-cert-container {
+  padding-right: 2rem;
+}
+
+.navbar-toggler-container {
+  padding-right: 2rem;
+}
+
+.login-cert {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.login-cert .nav-link {
+  font-size: 1.75rem;
+  margin: 0;
+  padding: 0.5rem 0.5rem;
+}
+
+.login-cert .nav-link i {
+  color: var(--white-color);
+}
+
+.login-cert .nav-link i:hover {
+  color: var(--main-color);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:active {
+  color: var(--main-color);
+}
+
+.da-home-page-text {
+  color: #fff;
+}
+.da-home-page-text h2 {
+  font-weight: 500;
+}
+.da-home-page-text h3 {
+  line-height: 1.5;
+}
+
+@media (max-width: 575.98px) {
+  .da-home-page-text .display-3 {
+    font-size: 2.5rem;
+  }
+  .da-home-page-text h3 {
+    font-size: 1rem;
+  }
+}
+
+/*Projects Style*/
+.da-projects .da-project-1 {
+  position: relative;
+  min-height: 450px;
+  background-size: cover;
+  background-image: center center;
+}
+
+.da-projects .da-project-2 {
+  position: relative;
+  min-height: 450px;
+  background-size: cover;
+  background-image: center center;
+}
+
+@media (max-width: 992px) {
+  .da-projects .da-project-icon {
+    margin-right: 15px;
+  }
+}
+
+/* Expertise Skills Style */
+.da-expertise .da-exp-skills {
+  padding: 70px 40px 60px 40px;
+}
+
+.da-expertise .progress-bar {
+  transform: scaleX(0);
+  transition: transform 2s ease-in-out;
+  transform-origin: 0% 0%;
+}
+
+.da-expertise .aos-animate {
+  transform: scaleX(1);
+}
+
+.da-expertise .da-exp-image {
+  background-image: center center;
+  background-size: cover;
+  min-height: 450px;
+}
+
+/*Team Carousel Style*/
+.da-team .carousel-indicators {
+  bottom: 0px;
+}
+.da-team .carousel-indicators li {
+  background-color: #040454;
+}
+.da-team .carousel-indicators .active {
+  background-color: #040454;
+}
+
+/*Image Gallery Style*/
+.da-gallery .card-columns .card {
+  border: none;
+  border-radius: none;
+}
+
+@media (max-width: 992px) {
+  .da-gallery .card-columns {
+    -moz-column-count: 2;
+    column-count: 2;
+  }
+}
+
+@media (max-width: 576px) {
+  .da-gallery .card-columns {
+    -moz-column-count: 1;
+    column-count: 1;
+  }
+}
+
+/* Company Brand Style */
+.da-company-brand img {
+  opacity: 0.6;
+  width: 90%;
+}
+
+.da-company-brand img:hover {
+  opacity: 1;
+}
+
+/*Contact Style*/
+.da-contact {
+  background: url("https://steamuserimages-a.akamaihd.net/ugc/2438013375536944117/AD8660D75A18C0253FD4237689978206AB1B83C3/?imw=1024&imh=541&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true")
+    no-repeat center center;
+  position: relative;
+  min-height: 700px;
+  background-size: cover;
+}
+
+.da-contact .da-contact-detail {
+  padding: 8% 0 8% 1%;
+}
+@media (max-width: 992px) {
+  .da-contact .da-contact-detail {
+    padding: 15% 0 5% 1%;
+  }
+}
+@media (max-width: 767px) {
+  .da-contact .da-contact-detail {
+    padding: 15px 0px 15px 0px;
+  }
+}
+
+/*Footer*/
+footer .da-social-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer ul {
+  padding: 0;
+}
+footer ul li {
+  list-style-type: none;
+}
+
+/* Credit Style */
+a.credit {
+  color: inherit;
+  border-bottom: 1px dashed;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*Scroll Top Style*/
+#scrolltop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+#scrolltop .btn {
+  border-radius: 50%;
+}
+
+.icon {
+  display: inline-flex;
+  align-self: center;
+  position: relative;
+}
+
+/*Common Style*/
+.da-section {
+  padding: 100px 0;
+}
+
+.logo-img {
+  width: 20%;
+  padding-left: 1rem;
+  filter: brightness(0) invert(1);
+}
+
+.logo-text {
+  font-size: 1.75rem;
+}
+
+/* -------------------------Home-section------------------------- */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.home-container .home-text h2 {
+  /* color: var(--main-color); */
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid rgba(255, 255, 255, 0.5);
+  animation: typing 6s steps(32, end) forwards infinite;
+}
+
+.home-container .home-text h3 {
+  color: var(--seconed-color);
+}
