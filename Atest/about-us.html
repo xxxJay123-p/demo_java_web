@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        color: grey;
+      }
+
+      .var-highlight {
+        color: #ac69d8;
+      }
+      .class-name {
+        color: #e5c07b;
+      }
+      .string-highlight {
+        color: rgba(253, 149, 90, 0.8);
+      }
+
+      .data-type {
+        color: #dfab5b;
+      }
+
+      .eq {
+        color: #56b6c2;
+      }
+      .value-name {
+        color: #c24034;
+      }
+
+      .string-highlight {
+        color: #98c363;
+      }
+
+      #typewriter {
+        font-size: 1rem;
+        margin: 0;
+        font-family: "Courier New";
+
+        &:after {
+          content: "|";
+          color: white;
+          animation: blink 500ms linear infinite alternate;
+        }
+      }
+
+      @-webkit-keyframes blink {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @-moz-keyframes blink {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @keyframes blink {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      .code-bg {
+        background-color: #1e1e1e;
+        color: white;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        width: 800px;
+        height: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="code-bg">
+      <pre id="typewriter">
+      <span class="var-highlight">public class</span> <span class="class-name">CoffeeShopAndStudio {</span>
+          <span class="var-highlight">private</span> <span class="data-type">String</span> <span class="value-name">name</span> <span class="eq"> = </span> <span class="string-highlight">"Java"</span>;
+          <span class="var-highlight">private</span> <span class="data-type">String</span><span class="var-highlight">[]</span> <span class="value-name">address</span> <span class="eq"> = </span> <span class="var-highlight">{</span>//
+                        <span class="string-highlight">"2410, 2/F,"
+                        "Li Dak Sum Yip Yio Chin Academic Building (LI)",
+                        "City University of Hong Kong, Tat Chee Avenue,"
+                        "Kowloon, Hong Kong"</span><span class="var-highlight">}</span>;
+          <span class="var-highlight">private</span> <span class="data-type">String</span><span class="var-highlight">[]</span> <span class="value-name">services</span> <span class="eq"> = </span> <span class="var-highlight">{</span>//
+                          <span class="string-highlight">"Order Coffee",
+                          "Buy product",
+                          "Learn Coures"</span><span class="var-highlight">}</span>;
+
+      <span class="class-name"> }</span> </pre>
+    </div>
+    <script>
+      function setupTypewriter(t) {
+        var HTML = t.innerHTML;
+
+        t.innerHTML = "";
+
+        var cursorPosition = 0,
+          tag = "",
+          writingTag = false,
+          tagOpen = false,
+          typeSpeed = 100,
+          tempTypeSpeed = 0;
+
+        var type = function () {
+          if (writingTag === true) {
+            tag += HTML[cursorPosition];
+          }
+
+          if (HTML[cursorPosition] === "<") {
+            tempTypeSpeed = 0;
+            if (tagOpen) {
+              tagOpen = false;
+              writingTag = true;
+            } else {
+              tag = "";
+              tagOpen = true;
+              writingTag = true;
+              tag += HTML[cursorPosition];
+            }
+          }
+          if (!writingTag && tagOpen) {
+            tag.innerHTML += HTML[cursorPosition];
+          }
+          if (!writingTag && !tagOpen) {
+            if (HTML[cursorPosition] === " ") {
+              tempTypeSpeed = 0;
+            } else {
+              tempTypeSpeed = Math.random() * typeSpeed + 50;
+            }
+            t.innerHTML += HTML[cursorPosition];
+          }
+          if (writingTag === true && HTML[cursorPosition] === ">") {
+            tempTypeSpeed = Math.random() * typeSpeed + 50;
+            writingTag = false;
+            if (tagOpen) {
+              var newSpan = document.createElement("span");
+              t.appendChild(newSpan);
+              newSpan.innerHTML = tag;
+              tag = newSpan.firstChild;
+            }
+          }
+
+          cursorPosition += 1;
+          if (cursorPosition < HTML.length - 1) {
+            setTimeout(type, tempTypeSpeed);
+          }
+        };
+
+        return {
+          type: type,
+        };
+      }
+
+      var typer = document.getElementById("typewriter");
+
+      typewriter = setupTypewriter(typewriter);
+
+      typewriter.type();
+    </script>
+  </body>
+</html>
