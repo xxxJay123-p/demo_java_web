@@ -838,5 +838,37 @@ a.credit {
   }
 }
 
-.contact-us__container {
+.contact-container {
+  .typewriter-effect {
+    overflow: hidden; /* Hide the text that is outside the viewport */
+    white-space: pre; /* Preserve whitespace and line breaks */
+    border-right: 2px solid rgba(255, 255, 255, 0.7); /* Add a blinking cursor effect */
+    animation: typewriter 3s steps(30, end) 1s 1 normal both,
+      caret-blink 500ms steps(1) infinite;
+  }
+
+  @keyframes typewriter {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes caret-blink {
+    50% {
+      border-right-color: transparent;
+    }
+  }
+  h2 {
+    font-size: 3rem;
+  }
+  span,
+  h3 {
+    font-size: 2rem;
+  }
+  .form-container{
+  
+  }
 }
