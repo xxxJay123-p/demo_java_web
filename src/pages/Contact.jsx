@@ -3,7 +3,7 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { tomorrow } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import Typewriter from "typewriter-effect";
 import { Container, Row, Col } from "react-bootstrap";
-import { contactConfig } from "../contactConfig";
+
 
 function Contact() {
   return (
