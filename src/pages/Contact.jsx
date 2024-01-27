@@ -1,7 +1,7 @@
 function Contact() {
   return (
     <>
-      <main className="">
+      <main className="contact-us__container">
 
       </main>
     </>
