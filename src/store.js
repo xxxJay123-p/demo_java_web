@@ -7,7 +7,7 @@ const useStore = create((set, get) => ({
   authenticatedUser: null,
   setAuthenticatedUser: (user) => set({ authenticatedUser: user }),
 
-  signinUrl: `${basicUrl}/signup`,
+  signupUrl: `${basicUrl}/signup`,
   loginUrl: `${basicUrl}/login`,
   getUsersUrl: `${basicUrl}/users`,
 
@@ -68,6 +68,16 @@ const useStore = create((set, get) => ({
       .then((fetchedPastries) => {
         console.log("fetchedPastries in store: ", fetchedPastries);
         set({ pastries: fetchedPastries });
+      });
+  },
+
+  courses: [],
+  fetchCourses: () => {
+    fetch(`${basicUrl}/coruse/`)
+      .then((resp) => resp.json())
+      .then((fetchedCourses) => {
+        console.log("fetchedPastries in store: ", fetchedCourses);
+        set({ courses: fetchedCourses });
       });
   },
 

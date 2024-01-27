@@ -1,17 +1,26 @@
 import "./styles/App.css";
+import { useEffect, useState } from "react";
+import React from "react";
 import { Route, Switch } from "react-router-dom";
+
+//components
+import NavigationBar from "./components/NavigationBar";
 import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Home from "./pages/Home";
 import Coffee from "./components/Coffee";
+import Course from "./components/Course";
 import Food from "./components/Food";
 import Frostino from "./components/Frostino";
 import Pastries from "./components/Pastries";
+
+//pages
 import Basket from "./pages/Basket";
-import Login from "./pages/Login";
-import Signup from "./pages/Signup";
+import Home from "./pages/Home";
+import OrderHome from "./pages/OrderHome";
 import PaymentReceived from "./pages/PaymentReceived";
-import { useEffect, useState } from "react";
+import LoginSignup from "./pages/LoginSignup";
+import Contact from "./pages/Contact";
+
+//Test
 
 // import Secure from './Secure'
 import jwtDecode from "jwt-decode";
@@ -39,17 +48,24 @@ function App() {
 
   return (
     <div className="App">
-      <Header
+      {/* <Header
+        handleLogout={handleLogout}
+        authenticatedUser={authenticatedUser}
+      /> */}
+      <NavigationBar
         handleLogout={handleLogout}
         authenticatedUser={authenticatedUser}
       />
 
       <Switch>
-        <Route path="/signup">
+        {/* <Route path="/signup">
           <Signup setAuthenticatedUser={setAuthenticatedUser} />
         </Route>
         <Route path="/login">
           <Login setAuthenticatedUser={setAuthenticatedUser} />
+        </Route> */}
+        <Route path="/login" exact>
+          <LoginSignup setAuthenticatedUser={setAuthenticatedUser} />
         </Route>
         {/* <Route path="/secure">
 					{authenticatedUser ? <Secure /> : <Redirect to="/signin" />}
@@ -57,17 +73,24 @@ function App() {
         <Route path="/" exact>
           <Home />
         </Route>
-        <Route path="/coffee" exact>
+
+        <Route path="/order" exact>
+          <OrderHome />
+        </Route>
+        <Route path="/order/coffee" exact>
           <Coffee />
         </Route>
-        <Route path="/food" exact>
+        <Route path="/order/food" exact>
           <Food />
         </Route>
-        <Route path="/pastries" exact>
+        <Route path="/order/pastries" exact>
           <Pastries />
         </Route>
-        <Route path="/frostino" exact>
+        <Route path="/order/frostino" exact>
           <Frostino />
+        </Route>
+        <Route path="/course" exact>
+          <Course />
         </Route>
         <Route path="/cart">
           <Basket authenticatedUser={authenticatedUser} />
@@ -81,9 +104,12 @@ function App() {
         <Route path="/paymentReceived">
           <PaymentReceived />
         </Route>
+        <Route path="/contactus">
+          <Contact />
+        </Route>
         <Route path="/admin">{/* <AdminRouter> */}</Route>
       </Switch>
-      <a class="back-to-top-link" href="#top-of-the-page">
+      <a className="back-to-top-link" href="#top-of-the-page">
         Back to top
       </a>
       <Footer />

@@ -20,8 +20,8 @@ function Frostino() {
       <main>
         <h2>Frostino</h2>
         <ul className="list__section">
-          {frostino.map((item) => (
-            <Item item={item} key={item.id} />
+          {frostino.map((frostino) => (
+            <Item key={frostino._id} item={frostino} />
           ))}
         </ul>
       </main>

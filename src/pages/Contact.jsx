@@ -1,4 +1,4 @@
-function Home() {
+function Contact() {
   return (
     <>
       <main className="">
@@ -8,4 +8,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Contact;

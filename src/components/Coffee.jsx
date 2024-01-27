@@ -21,7 +21,7 @@ function Coffee() {
         <h2>Coffee</h2>
         <ul className="list__section">
           {coffees.map((item) => (
-            <Item item={item} key={item.id} />
+            <Item key={item._id} item={item} />
           ))}
         </ul>
       </main>

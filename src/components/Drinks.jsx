@@ -22,7 +22,7 @@ function Drinks() {
       <small> Coming soon.. </small>
       <ul className="list__section">
         {drink.map((item, index) => (
-          <Item item={item} key={index} />
+          <Item key={item.id} item={item} />
         ))}
       </ul>
     </section>

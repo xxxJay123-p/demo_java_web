@@ -21,7 +21,7 @@ function Pastries() {
         <h2>Pastries</h2>
         <ul className="list__section">
           {pastries.map((item, index) => (
-            <Item item={item} key={index} />
+            <Item key={item._id} item={item} />
           ))}
         </ul>
       </main>

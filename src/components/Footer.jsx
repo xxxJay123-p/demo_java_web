@@ -1,18 +1,51 @@
+import { Github, Instagram, Facebook } from "react-bootstrap-icons";
+
 function Footer() {
   return (
-    <footer>
-      <p className="footer-font-size">
-        Educational exercise made as student by Valentina
-      </p>
-      <div className="footer-font-size">
-        Font made from{" "}
-        <a
-          className="link-no-white footer-font-size"
-          href="http://www.onlinewebfonts.com"
-        >
-          oNline Web Fonts
-        </a>
-        is licensed by CC BY 3.0
+    <footer class="bg-secondary da-section">
+      <div class="container text-white">
+        <div class="row">
+          <div class="col-md-5">
+            <div class="h2 mb-4">Java. Studios</div>
+            <p class="mb-3">contact@java.studio</p>
+          </div>
+          <div class="col-md-4">
+            <div class="h6 pb-2">Follow Us</div>
+            <ul>
+              <li class="mb-1">
+                <a class="da-social-link" href="#">
+                  <i aria-hidden="true">
+                    {" "}
+                    <Github />
+                  </i>
+                  <span class="ml-2">Github</span>
+                </a>
+              </li>
+              <li class="mb-1">
+                <a class="da-social-link" href="#">
+                  <i aria-hidden="true">
+                    {" "}
+                    <Instagram />
+                  </i>
+                  <span class="ml-2">Instagram</span>
+                </a>
+              </li>
+              <li class="mb-1">
+                <a class="da-social-link" href="#">
+                  <i aria-hidden="true">
+                    {" "}
+                    <Facebook />
+                  </i>
+                  <span class="ml-2">Facebook</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <div class="h6 pb-4">Copyright</div>
+            <p class="pb-1"> Java. Studios. All rights reserved.</p>
+          </div>
+        </div>
       </div>
     </footer>
   );

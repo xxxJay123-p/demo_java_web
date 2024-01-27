@@ -22,7 +22,7 @@ function Snacks() {
       <small> Coming soon.. </small>
       <ul className="list__section">
         {snacks.map((item) => (
-          <Item item={item} key={item.id} />
+          <Item key={item.id} item={item} />
         ))}
       </ul>
     </section>
