@@ -2,7 +2,6 @@ import React, { useState,useEffect } from "react";
 import { useHistory } from "react-router";
 import useStore from "../store";
 import { Github, Google, Facebook } from "react-bootstrap-icons";
-import Cookies from "js-cookie";
 import jwtDecode from "jwt-decode";
 import Aos from "aos";
 import "aos/dist/aos.css";

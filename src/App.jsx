@@ -92,7 +92,7 @@ function App() {
         <Route path="/course" exact>
           <Course />
         </Route>
-        <Route path="/contactus">
+        <Route path="/contactus" exact>
           <Contact />
         </Route>
         <Route path="/cart">
