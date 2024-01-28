@@ -24,7 +24,7 @@ const NavigationBar = ({ handleLogout, authenticatedUser }) => {
   const handleDropdownClose = (eventKey) => {
     setShowDropdown(false);
   };
-  
+
   return (
     <header id="top-of-the-page" className="top-bar">
       <main>
@@ -56,7 +56,9 @@ const NavigationBar = ({ handleLogout, authenticatedUser }) => {
                     id="dropdown-basic"
                     show={showDropdown}
                     onToggle={handleDropdownToggle}
-                    onSelect={handleDropdownClose}
+                    onSelect={(eventKey) => {
+                      handleDropdownClose(eventKey);
+                    }}
                   >
                     <div
                       className={`dropdown-menu ${showDropdown ? "show" : ""}`}
