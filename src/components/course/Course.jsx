@@ -29,15 +29,15 @@ function Course() {
         <h2>Courses</h2>
 
         <ul className="list__section courses-list__section">
-          {courses.map((courses) => (
+          {courses.map((course) => (
             <div className="card-coures">
-              <li key={courses._id} data-aos="fade-up">
-                <h3>{courses.name}</h3>
-                <p>{courses.description}</p>
-                <Image src={courses.imageUrl} alt={courses.name} />
-                <p>Price: ${courses.price}</p>
-                <p>Duration: {courses.duration_week} weeks</p>
-                <p>Instructor: {courses.instructor}</p>
+              <li key={course._id} data-aos="fade-up">
+                <h3>{course.name}</h3>
+                <p>{course.description}</p>
+                <Image src={course.imageUrl} alt={course.name} />
+                <p>Price: ${course.price}</p>
+                <p>Duration: {course.duration_week} weeks</p>
+                <p>Instructor: {course.instructor}</p>
               </li>
             </div>
           ))}

@@ -9,48 +9,48 @@ function Footer() {
   }, []);
 
   return (
-    <footer class="bg-secondary da-section" data-aos="fade-up">
-      <div class="container text-white">
-        <div class="row" data-aos="fade-up">
-          <div class="col-md-5">
-            <div class="h2 mb-4">Java. Studios</div>
-            <p class="mb-3">contact@java.studio</p>
+    <footer className="bg-secondary da-section" data-aos="fade-up">
+      <div className="container text-white">
+        <div className="row" data-aos="fade-up">
+          <div className="col-md-5">
+            <div className="h2 mb-4">Java. Studios</div>
+            <p className="mb-3">contact@java.studio</p>
           </div>
-          <div class="col-md-4">
-            <div class="h6 pb-2">Follow Us</div>
+          <div className="col-md-4">
+            <div className="h6 pb-2">Follow Us</div>
             <ul>
-              <li class="mb-1">
-                <a class="da-social-link" href="#">
+              <li className="mb-1">
+                <a className="da-social-link" href="#">
                   <i aria-hidden="true">
                     {" "}
                     <Github />
                   </i>
-                  <span class="ml-2">Github</span>
+                  <span className="ml-2">Github</span>
                 </a>
               </li>
-              <li class="mb-1">
-                <a class="da-social-link" href="#">
+              <li className="mb-1">
+                <a className="da-social-link" href="#">
                   <i aria-hidden="true">
                     {" "}
                     <Instagram />
                   </i>
-                  <span class="ml-2">Instagram</span>
+                  <span className="ml-2">Instagram</span>
                 </a>
               </li>
-              <li class="mb-1">
-                <a class="da-social-link" href="#">
+              <li className="mb-1">
+                <a className="da-social-link" href="#">
                   <i aria-hidden="true">
                     {" "}
                     <Facebook />
                   </i>
-                  <span class="ml-2">Facebook</span>
+                  <span className="ml-2">Facebook</span>
                 </a>
               </li>
             </ul>
           </div>
           <div>
-            <div class="h6 pb-4">Copyright</div>
-            <p class="pb-1"> Java. Studios. All rights reserved.</p>
+            <div className="h6 pb-4">Copyright</div>
+            <p className="pb-1"> Java. Studios. All rights reserved.</p>
           </div>
         </div>
       </div>

@@ -15,7 +15,7 @@ function OrderHome() {
         <Pastries />
         {/* <Drinks />
         <Snacks /> */}
-        {/* <a class="back-to-top-link" href="#top-of-the-page">
+        {/* <a className="back-to-top-link" href="#top-of-the-page">
 					Back to top
 				</a> */}
       </main>

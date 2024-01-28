@@ -116,15 +116,15 @@ const NavigationBar = ({ handleLogout, authenticatedUser }) => {
         </nav>
       </main>
 
-      <div class="container home-container">
-        <div class="home-text-container">
-          <div class="col-md-10 col-sm-12 px-0 mx-0 home-text">
-            <h2 class="display-3 text-uppercase">
+      <div className="container home-container">
+        <div className="home-text-container">
+          <div className="col-md-10 col-sm-12 px-0 mx-0 home-text">
+            <h2 className="display-3 text-uppercase">
               Debugging your day,
               <br />
               one cup at a time.
             </h2>
-            <h3 class="h4 mt-3">Brew or order a Perfect Coffee and Enjoy.</h3>
+            <h3 className="h4 mt-3">Brew or order a Perfect Coffee and Enjoy.</h3>
           </div>
         </div>
       </div>

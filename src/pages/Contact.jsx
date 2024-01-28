@@ -35,7 +35,7 @@ function Contact() {
             wrapLines={true}
             showLineNumbers={true}
           >
-            {`public class CoffeeShopAndStudio {
+            {`public className CoffeeShopAndStudio {
 private String name = "Java. Studios ";
 private String[] address = {
                         "2410, 2/F,",
@@ -54,19 +54,19 @@ private String[] services = {
       </section>
       <section>
         <h3> Our Location</h3>
-        <div class="map__bg">
-          <div class="map__container">
-            <div class="map" data-aos="flip-left">
+        <div className="map__bg">
+          <div className="map__container">
+            <div className="map" data-aos="flip-left">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7382.833743826122!2d114.16961399357906!3d22.3000686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x340400ef646de2a5%3A0x43755790396a351e!2sSCOPE%20TST%20East%20Learning%20Centre!5e0!3m2!1szh-TW!2shk!4v1702459094999!5m2!1szh-TW!2shk"
                 width="100%"
                 height="450"
-                allowfullscreen=""
+                allowFullScreen=""
                 loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
+                referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
             </div>
-            <div class="addrees"></div>
+            <div className="addrees"></div>
           </div>
         </div>
       </section>
