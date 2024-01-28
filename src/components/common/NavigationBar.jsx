@@ -54,7 +54,6 @@ const NavigationBar = ({ handleLogout, authenticatedUser }) => {
                     title="Order Now"
                     id="dropdown-basic"
                     show={showDropdown}
-                    Q
                     onToggle={handleDropdownToggle}
                     onSelect={handleDropdownClose}
                   >
