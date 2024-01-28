@@ -21,9 +21,10 @@ const NavigationBar = ({ handleLogout, authenticatedUser }) => {
     setShowDropdown(!showDropdown);
   };
 
-  const handleDropdownClose = () => {
-    setIsDropdownOpen(false);
+  const handleDropdownClose = (eventKey) => {
+    setShowDropdown(false);
   };
+  
   return (
     <header id="top-of-the-page" className="top-bar">
       <main>
