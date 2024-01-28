@@ -12,7 +12,7 @@ function Contact() {
   }, []);
 
   return (
-    <main className="contact-container">
+    <div className="contact-container">
       <section>
         <h2 data-aos="fade-left">About us</h2>
         <Typewriter
@@ -130,7 +130,7 @@ private String[] services = {
           }}
         />
       </section>
-    </main>
+    </div>
   );
 }
 
