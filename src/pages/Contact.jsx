@@ -1,15 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { tomorrow } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import Typewriter from "typewriter-effect";
 import { Container, Row, Col } from "react-bootstrap";
-
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function Contact() {
+  useEffect(function () {
+    Aos.init({ duration: 1000 });
+  }, []);
+
   return (
     <main className="contact-container">
       <section>
-        <h2>About us</h2>
+        <h2 data-aos="fade-left">About us</h2>
         <Typewriter
           options={{
             strings: [
@@ -21,7 +26,7 @@ function Contact() {
             loop: true,
           }}
         />
-        <div className="typewriter-effect">
+        <div className="typewriter-effect" data-aos="fade-right">
           <SyntaxHighlighter
             className="code-intro "
             id={"typewriter"}
@@ -51,7 +56,7 @@ private String[] services = {
         <h3> Our Location</h3>
         <div class="map__bg">
           <div class="map__container">
-            <div class="map">
+            <div class="map" data-aos="flip-left">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7382.833743826122!2d114.16961399357906!3d22.3000686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x340400ef646de2a5%3A0x43755790396a351e!2sSCOPE%20TST%20East%20Learning%20Centre!5e0!3m2!1szh-TW!2shk!4v1702459094999!5m2!1szh-TW!2shk"
                 width="100%"
@@ -71,7 +76,7 @@ private String[] services = {
           <h3 className="color_sec py-4">Get in touch</h3>
           <hr className="t_border my-4 ml-0 text-left" />
         </Col>
-        <div className="form-container">
+        <div className="form-container" data-aos="flip-left">
           <Row className="sec_sp">
             <Col lg="7" className="d-flex align-items-center">
               <form className="contact__form w-100">

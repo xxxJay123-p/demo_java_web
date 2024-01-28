@@ -11,6 +11,7 @@ export default function Router() {
 
   console.log("Admin Router: ", { authenticatedUser });
 
+
   useEffect(() => {
     if (authenticatedUser) return;
 

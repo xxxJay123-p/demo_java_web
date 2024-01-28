@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import useStore from "../store";
 import Item from "./Item";
+import Card from "./Cards";
 
 function Coffee() {
   //import coffees from store

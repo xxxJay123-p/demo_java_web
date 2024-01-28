@@ -1,4 +1,8 @@
+import React, { useEffect } from "react";
 import useStore from "../store";
+import Card from "./Cards";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const placeholder = "../public/assets/costa-coffee-logo.svg";
 
@@ -10,8 +14,13 @@ function Item({ item, key }) {
   const exist = basketItems.find((basketItem) => basketItem.id === item.id);
 
   const name = item.name;
+
+  useEffect(function () {
+    Aos.init({ duration: 1000 });
+  }, []);
+
   return (
-    <li key={item.id}>
+    <div className="card__item" data-aos="fade-up">
       <img
         className="image"
         src={item.imageUrl ? item.imageUrl : placeholder}
@@ -39,7 +48,7 @@ function Item({ item, key }) {
         </button>
         <div className="space"></div>
       </div>
-    </li>
+    </div>
   );
 }
 

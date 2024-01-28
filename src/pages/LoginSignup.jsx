@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { useHistory } from "react-router";
 import useStore from "../store";
 import { Github, Google, Facebook } from "react-bootstrap-icons";
 import Cookies from "js-cookie";
 import jwtDecode from "jwt-decode";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const initialForm = {
   email: "",
@@ -28,6 +30,10 @@ const LoginSignup = (props) => {
   const signupUrl = useStore((store) => store.signupUrl);
 
   const history = useHistory();
+
+  useEffect(function () {
+    Aos.init({ duration: 1000 });
+  }, []);
 
   const toggleForm = () => {
     setIsSignIn(!isSignIn);
@@ -111,7 +117,7 @@ const LoginSignup = (props) => {
       });
   }
   return (
-    <div className="login-signup">
+    <div className="login-signup" data-aos="fade-up">
       <div className={`container ${isSignIn ? "" : "active"}`} id="container">
         <div className={`form-container ${isSignIn ? "sign-in" : "sign-up"}`}>
           <form

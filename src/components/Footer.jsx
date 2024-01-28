@@ -1,10 +1,17 @@
+import React, { useEffect } from "react";
 import { Github, Instagram, Facebook } from "react-bootstrap-icons";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function Footer() {
+  useEffect(function () {
+    Aos.init({ duration: 1000 });
+  }, []);
+
   return (
-    <footer class="bg-secondary da-section">
+    <footer class="bg-secondary da-section" data-aos="fade-up">
       <div class="container text-white">
-        <div class="row">
+        <div class="row" data-aos="fade-up">
           <div class="col-md-5">
             <div class="h2 mb-4">Java. Studios</div>
             <p class="mb-3">contact@java.studio</p>

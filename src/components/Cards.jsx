@@ -2,18 +2,15 @@ import React, { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-function Home() {
+function Card(props) {
   useEffect(function () {
     Aos.init({ duration: 1000 });
   }, []);
 
   return (
-    <>
-      <main className="">
-        <section></section>
-      </main>
-    </>
+    <div>
+      <div data-aos={props.animation}></div>
+    </div>
   );
 }
-
-export default Home;
+export default Card;
