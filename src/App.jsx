@@ -92,6 +92,9 @@ function App() {
         <Route path="/course" exact>
           <Course />
         </Route>
+        <Route path="/contactus">
+          <Contact />
+        </Route>
         <Route path="/cart">
           <Basket authenticatedUser={authenticatedUser} />
         </Route>
@@ -104,9 +107,7 @@ function App() {
         <Route path="/paymentReceived">
           <PaymentReceived />
         </Route>
-        <Route path="/contactus">
-          <Contact />
-        </Route>
+
         <Route path="/admin">{/* <AdminRouter> */}</Route>
       </Switch>
       <a className="back-to-top-link" href="#top-of-the-page">
