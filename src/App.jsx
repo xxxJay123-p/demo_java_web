@@ -4,13 +4,13 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 
 //components
-import NavigationBar from "./components/NavigationBar";
-import Footer from "./components/Footer";
-import Coffee from "./components/Coffee";
-import Course from "./components/Course";
-import Food from "./components/Food";
-import Frostino from "./components/Frostino";
-import Pastries from "./components/Pastries";
+import NavigationBar from "./components/common/NavigationBar";
+import Footer from "./components/common/Footer";
+import Coffee from "./components/order/Coffee";
+import Course from "./components/course/Course";
+import Food from "./components/order/Food";
+import Frostino from "./components/order/Frostino";
+import Pastries from "./components/order/Pastries";
 
 //pages
 import Basket from "./pages/Basket";
