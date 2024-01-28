@@ -1,6 +1,6 @@
 import create from "zustand";
 
-const basicUrl = "http://localhost:4000";
+const basicUrl = "https://demo-java-web-backend.onrender.com";
 
 const useStore = create((set, get) => ({
   //AUTH
