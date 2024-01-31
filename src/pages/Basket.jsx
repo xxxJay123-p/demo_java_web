@@ -50,8 +50,8 @@ function Basket({ authenticatedUser }) {
             <div className="columns">
               {
                 <img
-                  className="image smallimage"
-                  src={itemimage ? itemimage : placeholder}
+                  className="image smallImage"
+                  src={item.imageUrl ? item.imageUrl : placeholder}
                   alt={item.name}
                 />
               }
