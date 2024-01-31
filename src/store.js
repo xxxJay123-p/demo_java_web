@@ -88,11 +88,11 @@ const useStore = create((set, get) => ({
 
   basketItems: [],
   addItemBasket: (newItem) => {
-    const exist = get().basketItems.find((item) => item.id === newItem.id);
+    const exist = get().basketItems.find((item) => item._id === newItem._id);
     if (exist) {
       set({
         basketItems: get().basketItems.map((item) =>
-          item.id === newItem.id ? { ...exist, qnt: exist.qnt + 1 } : item
+          item._id === newItem._id ? { ...exist, qnt: exist.qnt + 1 } : item
         ),
       });
     } else {
@@ -101,17 +101,17 @@ const useStore = create((set, get) => ({
   },
 
   removeItemBasket: (targetItem) => {
-    const exist = get().basketItems.find((item) => item.id === targetItem.id);
+    const exist = get().basketItems.find((item) => item._id === targetItem._id);
     if (exist.qnt === 1) {
       set({
         basketItems: get().basketItems.filter(
-          (item) => item.id !== targetItem.id
+          (item) => item._id !== targetItem._id
         ),
       });
     } else {
       set({
         basketItems: get().basketItems.map((item) =>
-          item.id === targetItem.id ? { ...exist, qnt: exist.qnt - 1 } : item
+          item._id === targetItem._id ? { ...exist, qnt: exist.qnt - 1 } : item
         ),
       });
     }

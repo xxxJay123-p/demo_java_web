@@ -10,7 +10,7 @@ function Item({ item, key }) {
   const removeItemBasket = useStore((store) => store.removeItemBasket);
   const basketItems = useStore((store) => store.basketItems);
 
-  const exist = basketItems.find((basketItem) => basketItem.id === item.id);
+  const exist = basketItems.find((basketItem) => basketItem._id === item._id);
 
   const name = item.name;
 
@@ -19,7 +19,7 @@ function Item({ item, key }) {
   }, []);
 
   return (
-    <div className="card__item" data-aos="fade-up">
+    <li key={item._id}>
       <img
         className="image"
         src={item.imageUrl ? item.imageUrl : placeholder}
@@ -47,7 +47,7 @@ function Item({ item, key }) {
         </button>
         <div className="space"></div>
       </div>
-    </div>
+    </li>
   );
 }
 

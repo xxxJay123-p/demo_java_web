@@ -21,7 +21,7 @@ function Food() {
         <h2>Food</h2>
         <ul className="list__section">
           {food.map((item) => (
-            <Item key={item.id} item={item} />
+            <Item key={item._id} item={item} />
           ))}
         </ul>
       </main>
